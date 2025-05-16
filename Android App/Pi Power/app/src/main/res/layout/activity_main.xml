@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:background="#979494"
+        android:gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="WiFi"
+            android:src="@drawable/no_wifi"
+            app:layout_constraintEnd_toStartOf="@+id/wifi"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ImageContrastCheck"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Hello World!"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="start">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/offline" />
+
+                    <TextView
+                        android:id="@+id/conn_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:tag="offline"
+                        android:text="offline"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="0.5"
+            android:gravity="end">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="TODO"
+                    android:gravity="center"
+                    android:importantForAccessibility="no">
+
+                    <ImageView
+                        android:id="@+id/batteryView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_margin="5dp"
+                        android:contentDescription="TODO"
+                        android:rotation="90"
+                        android:src="@drawable/battery_empty" />
+
+                    <ImageView
+                        android:id="@+id/bluetoothView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_margin="5dp"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/bluetooth_disconnected" />
+
+                    <ImageView
+                        android:id="@+id/wifiView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/no_wifi" />
+
+                    <ImageView
+                        android:id="@+id/uartView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/cable_disconnected" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:textAlignment="center">
+
+                    <me.tankery.lib.circularseekbar.CircularSeekBar
+                        android:id="@+id/cpuSeekBar"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cs_circle_color="#FFFFFF"
+                        app:cs_circle_progress_color="#F44336"
+                        app:cs_circle_stroke_width="10dp"
+                        app:cs_circle_style="butt"
+                        app:cs_hide_progress_when_empty="false"
+                        app:cs_lock_enabled="true"
+                        app:cs_maintain_equal_circle="true"
+                        app:cs_move_outside_circle="false"
+                        app:cs_negative_enabled="false"
+                        app:cs_pointer_alpha_ontouch="0"
+                        app:cs_pointer_halo_width="2dp"
+                        app:cs_pointer_stroke_width="30dp"
+                        app:cs_progress="80" />
+
+                    <TextView
+                        android:id="@+id/cpu_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/cpuChart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:textAlignment="center">
+
+                    <me.tankery.lib.circularseekbar.CircularSeekBar
+                        android:id="@+id/ramSeekBar"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cs_circle_color="#FFFFFF"
+                        app:cs_circle_progress_color="#2196F3"
+                        app:cs_circle_stroke_width="10dp"
+                        app:cs_circle_style="butt"
+                        app:cs_hide_progress_when_empty="false"
+                        app:cs_lock_enabled="true"
+                        app:cs_maintain_equal_circle="true"
+                        app:cs_move_outside_circle="false"
+                        app:cs_negative_enabled="false"
+                        app:cs_pointer_alpha_ontouch="0"
+                        app:cs_pointer_halo_width="2dp"
+                        app:cs_pointer_stroke_width="30dp"
+                        app:cs_progress="80" />
+
+                    <TextView
+                        android:id="@+id/ram_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/ramChart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:padding="0dp"
+                android:textAlignment="center">
+
+                <me.tankery.lib.circularseekbar.CircularSeekBar
+                    android:id="@+id/tempSeekBar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cs_circle_color="#FFFFFF"
+                    app:cs_circle_progress_color="#FF9800"
+                    app:cs_circle_stroke_width="10dp"
+                    app:cs_circle_style="butt"
+                    app:cs_hide_progress_when_empty="false"
+                    app:cs_lock_enabled="true"
+                    app:cs_maintain_equal_circle="true"
+                    app:cs_move_outside_circle="false"
+                    app:cs_negative_enabled="false"
+                    app:cs_pointer_alpha_ontouch="0"
+                    app:cs_pointer_halo_width="2dp"
+                    app:cs_pointer_stroke_width="30dp"
+                    app:cs_progress="80" />
+
+                <TextView
+                    android:id="@+id/temp_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/c"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/tempChart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textStyle="bold" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/diskPieChart"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/conn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connected"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP Address: "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Searching..."
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/manageWifiImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/none"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/manage_wifi"
+        app:layout_constraintBottom_toBottomOf="@+id/close"
+        app:layout_constraintEnd_toStartOf="@+id/close"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/close" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/powerImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/none"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/power_off"
+
+        app:layout_constraintBottom_toBottomOf="@+id/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/close"
+        app:layout_constraintTop_toTopOf="@+id/close"
+        app:layout_constraintVertical_bias="1.0"
+        app:shapeAppearanceOverlay="@style/RoundedImageButtonStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
