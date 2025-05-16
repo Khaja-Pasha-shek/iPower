@@ -103,8 +103,13 @@ From firmware to frontend – an end-to-end embedded solution.
 ## 📬 Contact
 
 For suggestions, issues, or contributions:  
-[GitHub Issues](https://github.com/yourusername/iPower/issues) • your.email@example.com
+[GitHub Issues](https://github.com/yourusername/iPower/issues) • skkhaja8558@gmail.com
 
 ---
 
 > _Empowering embedded systems with smart, remote control._
+## 🔗 Connect with Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge)](www.linkedin.com/in/khaja-pasha)
+[![Gmail](https://img.shields.io/badge/Gmail-red?logo=gmail&style=for-the-badge)](mailto:skkhaja8558@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-black?logo=github&style=for-the-badge)](https://github.com/Khaja-Pasha-shek/)
